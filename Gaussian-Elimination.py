@@ -3,6 +3,9 @@ from numpy.linalg import norm, inv
 
 from colors import bcolors
 
+print(
+    "date:19.02.24 \n the git link:https://github.com/yagelbatito/analiza_test_batititia.git\ngroup:Almog Babila 209477678, Hay Carmi 207265687, Yagel Batito 318271863, Meril Hasid 324569714\nstudent:Yagel Batito 318271863")
+
 
 def gaussianElimination(mat):
     N = len(mat)
@@ -87,9 +90,10 @@ def backward_substitution(mat):
 
 if __name__ == '__main__':
 
-    A_b = [[0, 0, 2, 2],
-           [1, 0, 4, 6],
-           [1, 1, 0, -3]]
+    A_b = [[0,2,3,4,5],
+           [2,0,4,5,1],
+           [8,8,0,8,1],
+           [24,15,22,0,8]]
 
     """
     check_det = []
@@ -113,5 +117,3 @@ if __name__ == '__main__':
         for x in result:
             print("{:.6f}".format(x))
 
-    print(
-        "the git link:https://github.com/yagelbatito/analiza_test_batititia.git\ngroup:Almog Babila, Hay Carmi, Yagel Batito, Meril Hasid\nstudent:Yagel Batito 318271863")
