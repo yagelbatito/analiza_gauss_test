@@ -9,6 +9,7 @@ print(
 
 
 def gaussianElimination(mat):
+
     N = len(mat)
 
     singular_flag = forward_substitution(mat)
@@ -34,6 +35,7 @@ def swap_row(mat, i, j):
 
 
 def forward_substitution(mat):
+    print("The max norm of matrix is: ", cond.norm(A_b) + 1)
     N = len(mat)
     for k in range(N):
 
@@ -92,8 +94,8 @@ def backward_substitution(mat):
 if __name__ == '__main__':
 
     A_b = [[1,1/2,1/3,1],
-           [1/2,1/3,1/4,0],
-           [1/3,1/4,1/5,0]]
+            [1/2,1/3,1/4,0],
+            [1/3,1/4,1/5,0]]
 
     """
     check_det = []
@@ -118,4 +120,3 @@ if __name__ == '__main__':
             print("{:.6f}".format(x))
 
 
-    print("The max norm of matrix is: " ,cond.norm(A_b)+1)
