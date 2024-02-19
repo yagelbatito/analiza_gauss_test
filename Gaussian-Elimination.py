@@ -1,8 +1,9 @@
 import numpy as np
 from numpy.linalg import norm, inv
 
+import cond
 from colors import bcolors
-
+from cond import norm
 print(
     "date:19.02.24 \n the git link:https://github.com/yagelbatito/analiza_gauss_test.git\ngroup:Almog Babila 209477678, Hay Carmi 207265687, Yagel Batito 318271863, Meril Hasid 324569714\nstudent:Yagel Batito 318271863")
 
@@ -90,10 +91,9 @@ def backward_substitution(mat):
 
 if __name__ == '__main__':
 
-    A_b = [[0,2,3,4,5],
-           [2,0,4,5,1],
-           [8,8,0,8,1],
-           [24,15,22,0,8]]
+    A_b = [[1,1/2,1/3,1],
+           [1/2,1/3,1/4,0],
+           [1/3,1/4,1/5,0]]
 
     """
     check_det = []
@@ -117,3 +117,5 @@ if __name__ == '__main__':
         for x in result:
             print("{:.6f}".format(x))
 
+
+    print("The max norm of matrix is: " ,cond.norm(A_b)+1)
